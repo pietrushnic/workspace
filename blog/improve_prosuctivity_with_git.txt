@@ -1,0 +1,11 @@
+Improve productivity by trcking work enviroment in git
+1. Create directory structure
+	workspace
+	|- dotfiles
+	|- blog
+	|- scripts
+	a. mkdir workspace;mkdir workspace/blog
+	b. cd workspace;<write some files for your blog with your favourite editor>;git init
+	c. create .gitignore
+		.gitignore
+		*.swp
