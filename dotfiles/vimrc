@@ -7,6 +7,9 @@ call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
+" fuzzy-finder - fix colors
+highlight PmenuSel ctermbg=9
+
 " fuzzyfidner
 let g:fuf_modesDisable = []
 let g:fuf_mrufile_maxItem = 400
