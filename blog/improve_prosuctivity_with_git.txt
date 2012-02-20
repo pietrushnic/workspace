@@ -1,11 +1,60 @@
-Improve productivity by trcking work enviroment in git
+Improve productivity by tracking work enviroment in git
 1. Create directory structure
 	workspace
 	|- dotfiles
 	|- blog
 	|- scripts
 	a. mkdir workspace;mkdir workspace/blog
-	b. cd workspace;<write some files for your blog with your favourite editor>;git init
-	c. create .gitignore
+	b. cd workspace;<write some files for your blog with your favourite
+	editor>;git init
+	c. git add .;git commit -m "Initial commit for enviroment tracking"
+	d. create .gitignore
 		.gitignore
 		*.swp
+2. Vim configuration
+	a. cd ~/workspace/dotfiles;mkdir vim
+	b. ln -s $PWD/vim ~/.vim
+	c. first of all install pathogen - to manage your scripts with clean
+	manner
+		- git submodule add https://github.com/tpope/vim-pathogen.git dotfiles/vim/pathogen
+		- git submodule init && git submodule update
+		- cd dotfiles/vim;mkdir {autoload,bundle};cd autload
+		- ln -s ../pathogen/autoload/pathogen.vim .
+		- tree should look like that:
+		pkrol@eriador:~/workspace/dotfiles$ tree
+		.
+		└── vim
+		    ├── autoload
+		    │   └── pathogen.vim -> ../pathogen/autoload/pathogen.vim
+		    ├── bundle
+		    └── pathogen
+		        ├── autoload
+		        │   └── pathogen.vim
+		        └── README.markdown
+	d. configure pathogen by add correct lines to vimrc, to do this in clean
+	 way in this enviroment add lines below to vimrcL
+	call pathogen#infect()
+	call pathogen#runtime_append_all_bundles()
+	call pathogen#helptags()
+	syntax on
+	filetype plugin indent on
+	e. fuzzyfinder - I cannot work without this plugin, need it as git
+	submodule, so we use version from github
+		- git submodule add https://github.com/vim-scripts/FuzzyFinder.git dotfiles/vim/bundle/fuzzyfinder
+		- git submodule add https://github.com/vim-scripts/L9.git dotfiles/vim/bundle/l9
+		- git submodule init && git submodule update
+	f. commit all above changes, personaly I use prefix for commits related to particular apps (vim, git etc.)
+	g. Configure fuzzyfinder
+		- type :h fuf@en - goes to fuzzyfinder hel
+		- choose tag fuf-vimrc-example and press Ctrl-]
+		- mark whole keybindings copy and paste to ~/.vimrc
+	i. add gitgnore for submodules, helptags creates some files with the tags* name pattern
+	j. by default fuzzy finder operate on unfriendly color palette espessicaly when using through putty, changing highlighted line
+	could be acheived by add below line to vimrc:
+	" fuzzy-finder - fix colors
+	highlight PmenuSel ctermbg=9
+	k. to play with large projects ctags and cscope support is prcieless
+		- for details see vimrc
+	j. commit changes
+	
+
