@@ -59,3 +59,15 @@ nnoremap <silent> sr     :FufRenewCache<CR>
 nnoremap <silent> rs	:!ctags -R;cscope -R -q -b -v<CR>
 " reconnect to cscope db
 nnoremap <silent> cs	:cs add cscope.out<CR>
+
+"""" Messages, Info, Status
+set ls=2                " allways show status line
+set vb t_vb=            " Disable all bells. I hate ringing/flashing.
+set confirm             " Y-N-C prompt if closing with unsaved changes.
+set showcmd             " Show incomplete normal mode commands as I type.
+set report=0            " : commands always print changed line count.
+set shortmess+=a        " Use [+]/[RO]/[w] for modified/readonly/written.
+set ruler               " Show some info, even without statuslines.
+set laststatus=2        " Always show statusline, even if only 1 window.
+set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
+let g:ctags_statusline=1
