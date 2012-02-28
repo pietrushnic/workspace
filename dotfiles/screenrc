@@ -11,3 +11,8 @@ startup_message off
 # displaying the window number and application name (by default).
 caption always
 caption string "%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]"
+
+#
+# Run a screensaver if there's nothing happening for a while.
+#
+idle 300 lockscreen
