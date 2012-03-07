@@ -6,7 +6,7 @@ git submodule update
 # backup
 mv $HOME/.vimrc $HOME/.vimrc.old
 mv $HOME/.gitconfig $HOME/.gitconfig.old
-rm $HOME/.vim.old
+rm -rf $HOME/.vim.old
 mv $HOME/.vim $HOME/.vim.old
 mv $HOME/.screenrc $HOME/.screenrc.old
 mv $HOME/.bashrc $HOME/.bashrc.old
