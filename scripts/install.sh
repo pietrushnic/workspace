@@ -12,6 +12,8 @@ mv $HOME/.screenrc $HOME/.screenrc.old
 mv $HOME/.bashrc $HOME/.bashrc.old
 mv $HOME/.bash_aliases $HOME/.bash_aliases.old
 
+# link
+cd dotfiles
 ln -s $PWD/vimrc $HOME/.vimrc
 ln -s $PWD/gitconfig $HOME/.gitconfig
 ln -s $PWD/vim $HOME/.vim
@@ -19,3 +21,9 @@ ln -s $PWD/screenrc $HOME/.screenrc
 ln -s $PWD/bashrc $HOME/.bashrc
 ln -s $PWD/bash_aliases $HOME/.bash_aliases
 
+# create git ignore for known vim submodules
+echo .gitignore > vim/bundle/fuzzyfinder/.gitignore
+echo "tags*" >> vim/bundle/fuzzyfinder/.gitignore
+
+echo .gitignore > vim/bundle/l9/.gitignore
+echo "tags*" >> vim/bundle/l9/.gitignore
