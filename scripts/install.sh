@@ -1,4 +1,9 @@
 #!/bin/bash
+
+cd ..;git submodule init
+git submodule update
+
+# backup
 mv $HOME/.vimrc $HOME/.vimrc.old
 mv $HOME/.gitconfig $HOME/.gitconfig.old
 rm $HOME/.vim.old
