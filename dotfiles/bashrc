@@ -85,6 +85,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+#user deined completion
+if [ -f ~/.bash_completion ] && ! shopt -oq posix; then
+    . ~/.bash_completion
+fi
+
 #fix spelling mistakes
 shopt -s cdspell
 
