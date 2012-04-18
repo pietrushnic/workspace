@@ -28,9 +28,12 @@ echo "tags*" >> vim/bundle/fuzzyfinder/.gitignore
 echo .gitignore > vim/bundle/l9/.gitignore
 echo "tags*" >> vim/bundle/l9/.gitignore
 
-#checkout master for all submodules
+#checkout master for all submodules and pathogen
 s_mods=$(find $PWD/dotfiles/vim/bundle/ -maxdepth 1 -type d|tail -n +2)
 for s_mod in $s_mods; do
 	cd $s_mod
 	git co master
 done
+
+cd $PWD/dotfiles/vim/pathogen
+git co master
