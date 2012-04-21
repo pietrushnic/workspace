@@ -10,6 +10,6 @@
 [submodule "dotfiles/vim/bundle/fugitive"]
 	path = dotfiles/vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "dotfiles/vim/bundle/vimblogger"]
-	path = dotfiles/vim/bundle/vimblogger
-	url = https://github.com/pietrushnic/vimblogger_ft.git
+[submodule "dotfiles/vim/bundle/metarw"]
+	path = dotfiles/vim/bundle/metarw
+	url = https://github.com/kana/vim-metarw.git
