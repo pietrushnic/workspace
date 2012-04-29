@@ -98,6 +98,6 @@ shopt -s cdspell
 export EDITOR=vim
 
 # screensaver for gnu screen
-if [ -e /usr/bin/cmatrix ] && [ -e /usr/bin/vlock ]; then
+if [ -e /usr/bin/cmatrix ]; then
 	export LOCKPRG=$HOME/workspace/scripts/lockscreen.sh
 fi
