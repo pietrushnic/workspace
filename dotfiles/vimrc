@@ -85,3 +85,5 @@ set incsearch 	" Incrementally search while typing a /regex
 
 " ctags
 " set tags=./tags;/
+" Enable python folding
+let g:pymode_folding = 0
