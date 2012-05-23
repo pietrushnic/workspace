@@ -56,7 +56,7 @@ nnoremap <silent> se     :FufEditDataFile<CR>
 nnoremap <silent> sr     :FufRenewCache<CR>
 
 " tags and cscope db rescan
-nnoremap <silent> rs	:!ctags -R;cscope -R -q -b -v<CR>
+nnoremap <silent> rs	:cs kill 0<CR>:!ctags -R;cscope -R -q -b -v<CR>
 " reconnect to cscope db
 nnoremap <silent> cs	:cs add cscope.out<CR>
 
