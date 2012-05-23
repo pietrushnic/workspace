@@ -107,3 +107,5 @@ set pager_index_lines=21
 # got to bottom of the message
 bind pager G bottom
 macro index M "T.*\n;WN" "Mark all messages as read"
+# set vim as default editor
+set editor="vim -c \"set spell spelllang=pl,en\""
