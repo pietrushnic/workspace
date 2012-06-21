@@ -136,3 +136,6 @@ set noswapfile     " no swap files
 set diffopt+=iwhite
 nmap dt :diffthis<CR>
 nmap du :diffupdate<CR>
+
+" open file under coursor
+nmap gf :e **/<cfile><cr>
