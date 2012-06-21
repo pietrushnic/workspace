@@ -127,3 +127,7 @@ nmap <C-Space><C-Space>i
 	\:vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-Space><C-Space>d
 	\:vert scs find d <C-R>=expand("<cword>")<CR><CR>
+
+set nobackup       " no backup files
+set nowritebackup  " only in case you don't want a backup file while editing
+set noswapfile     " no swap files
