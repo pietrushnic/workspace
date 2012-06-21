@@ -131,3 +131,8 @@ nmap <C-Space><C-Space>d
 set nobackup       " no backup files
 set nowritebackup  " only in case you don't want a backup file while editing
 set noswapfile     " no swap files
+
+" vimdiff
+set diffopt+=iwhite
+nmap dt :diffthis<CR>
+nmap du :diffupdate<CR>
