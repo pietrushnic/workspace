@@ -134,8 +134,10 @@ set noswapfile     " no swap files
 
 " vimdiff
 set diffopt+=iwhite
-nmap dt :diffthis<CR>
-nmap du :diffupdate<CR>
+
+"TODO: remap this
+"nmap dt :diffthis<CR>
+"nmap du :diffupdate<CR>
 
 " open file under coursor
 nmap gf :e **/<cfile><cr>
