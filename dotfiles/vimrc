@@ -138,6 +138,8 @@ set diffopt+=iwhite
 "TODO: remap this
 "nmap dt :diffthis<CR>
 "nmap du :diffupdate<CR>
+" UEFI code style indentation
+au BufRead,BufEnter /home/pietrushnic/src/*.{c,h} set cindent tabstop=2 softtabstop=2 shiftwidth=2 shiftround smartindent smarttab smarttab autoindent expandtab
 
 " open file under coursor
 nmap gf :e **/<cfile><cr>
