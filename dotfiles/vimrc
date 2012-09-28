@@ -8,7 +8,7 @@ syntax on
 filetype plugin indent on
 
 " fuzzy-finder - fix colors
-highlight PmenuSel ctermbg=9
+highlight PmenuSel ctermbg=9 ctermfg=white
 
 " fuzzyfidner
 let g:fuf_modesDisable = []
