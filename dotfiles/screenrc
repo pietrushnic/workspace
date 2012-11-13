@@ -32,4 +32,3 @@ stuff "sudo apt-get dist-upgrade;update;upgrade"
 # goto workspace in ws window and pull latest workspace
 select ws
 stuff ws
-stuff "git pull"
