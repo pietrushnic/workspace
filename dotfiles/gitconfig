@@ -16,7 +16,7 @@
 	ign = ls-files -o -i --exclude-standard
 	dt = difftool
 [user]
-	name = pietrushnic
+	name = Piotr Król
 	email = pietrushnic@gmail.com
 [color]
 	ui = auto
