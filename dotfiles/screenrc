@@ -16,3 +16,11 @@ caption string "%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?
 # Run a screensaver if there's nothing happening for a while.
 #
 idle 1500 lockscreen
+
+# open default windows
+screen -t mutt mutt
+screen -t vim vim
+screen -t apt
+screen -t ws
+screen -t shell
+screen -t src
