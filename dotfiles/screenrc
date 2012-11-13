@@ -24,3 +24,7 @@ screen -t apt
 screen -t ws
 screen -t shell
 screen -t src
+
+# run update in apt window
+select apt
+stuff "sudo apt-get dist-upgrade;update;upgrade"
