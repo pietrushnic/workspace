@@ -17,3 +17,6 @@
 [submodule "dotfiles/vim/bundle/cvim"]
 	path = dotfiles/vim/bundle/cvim
 	url = https://github.com/vim-scripts/c.vim.git
+[submodule "dotfiles/vim/bundle/vim-rails"]
+	path = dotfiles/vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails.git
