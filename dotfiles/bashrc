@@ -100,3 +100,4 @@ export EDITOR=vim
 #source $HOME/.rvm/scripts/rvm
 
 export PYTHONSTARTUP=~/.pythonrc
+
