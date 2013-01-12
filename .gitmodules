@@ -20,3 +20,6 @@
 [submodule "dotfiles/vim/bundle/vim-rails"]
 	path = dotfiles/vim/bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "dotfiles/vim/bundle/zencoding-vim"]
+	path = dotfiles/vim/bundle/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git
