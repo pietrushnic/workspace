@@ -151,3 +151,6 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
+
+" jquery support
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
