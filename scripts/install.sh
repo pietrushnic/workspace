@@ -14,6 +14,7 @@ mv $HOME/.bash_aliases $HOME/.bash_aliases.old
 mv $HOME/.muttrc $HOME/.muttrc.old
 mv $HOME/.urlview $HOME/.urlview.old
 mv $HOME/.mailcap $HOME/.mailcap.old
+mv $HOME/.pythonrc $HOME/.pythonrc.old
 
 # link
 cd dotfiles
@@ -26,6 +27,7 @@ ln -s $PWD/bash_aliases $HOME/.bash_aliases
 ln -s $PWD/muttrc $HOME/.muttrc
 ln -s $PWD/urlview $HOME/.urlview
 ln -s $PWD/mailcap $HOME/.mailcap
+ln -s $PWD/pythonrc $HOME/.pythonrc
 
 # create git ignore for known vim submodules
 echo .gitignore > vim/bundle/fuzzyfinder/.gitignore
