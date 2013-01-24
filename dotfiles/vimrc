@@ -6,10 +6,8 @@ call pathogen#helptags()
 " general
 syntax on
 filetype plugin indent on
-colorscheme desert
-
-" fuzzy-finder - fix colors
-highlight PmenuSel ctermbg=9 ctermfg=white
+set background=dark
+colorscheme solarized
 
 " fuzzyfidner
 let g:fuf_modesDisable = []
