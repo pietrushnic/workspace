@@ -18,3 +18,5 @@ alias l='ls -CF'
 alias ws='cd $HOME/workspace'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
+
+alias tmux="TERM=screen-256color-bce tmux"
