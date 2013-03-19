@@ -32,3 +32,6 @@
 [submodule "dotfiles/vim/bundle/vim-markdown"]
 	path = dotfiles/vim/bundle/vim-markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "dotfiles/vim/bundle/vim-liquid"]
+	path = dotfiles/vim/bundle/vim-liquid
+	url = https://github.com/tpope/vim-liquid.git
