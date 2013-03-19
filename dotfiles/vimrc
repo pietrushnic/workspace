@@ -147,8 +147,9 @@ set diffopt+=iwhite
 "nmap dt :diffthis<CR>
 "nmap du :diffupdate<CR>
 " UEFI code style indentation
-au BufRead,BufEnter /home/pietrushnic/src/*.{c,h} set cindent tabstop=2 softtabstop=2 shiftwidth=2 shiftround smartindent smarttab smarttab autoindent expandtab
-au BufRead,BufEnter /home/pietrushnic/src/*.{js,html} set cindent tabstop=4 softtabstop=4 shiftwidth=4 shiftround smartindent smarttab smarttab autoindent expandtab
+au BufRead,BufEnter /home/pietrushnic/src/*.{c,h} set cindent tabstop=2 softtabstop=2 shiftwidth=2 shiftround smartindent smarttab smarttab autoindent expandtab textwidth=80 formatoptions+=w
+au BufRead,BufEnter *.js set cindent tabstop=4 softtabstop=4 shiftwidth=4 shiftround smartindent smarttab smarttab autoindent expandtab
+au BufRead,BufEnter *.{css,scss,html} set cindent tabstop=2 softtabstop=2 shiftwidth=2 shiftround smartindent smarttab smarttab autoindent expandtab
 
 " open file under coursor
 nmap gf :e **/<cfile><cr>
@@ -162,3 +163,6 @@ endif
 
 " jquery support
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
+" blogging with markdown
+au BufRead,BufEnter *.markdown set textwidth=80 formatoptions+=w spell spelllang=en_us
