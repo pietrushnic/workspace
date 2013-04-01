@@ -16,6 +16,7 @@ mv $HOME/.urlview $HOME/.urlview.old
 mv $HOME/.mailcap $HOME/.mailcap.old
 mv $HOME/.pythonrc $HOME/.pythonrc.old
 mv $HOME/.tmux.conf $HOME/.tmux.conf.old
+mv $HOME/.tmuxinator $HOME/.tmuxinator.old
 
 # link
 cd dotfiles
@@ -30,6 +31,7 @@ ln -s $PWD/urlview $HOME/.urlview
 ln -s $PWD/mailcap $HOME/.mailcap
 ln -s $PWD/pythonrc $HOME/.pythonrc
 ln -s $PWD/tmux.conf $HOME/.tmux.conf
+ln -s $PWD/tmuxinator $HOME/.tmuxinator
 
 # create git ignore for known vim submodules
 echo .gitignore > vim/bundle/fuzzyfinder/.gitignore

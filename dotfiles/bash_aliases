@@ -20,3 +20,4 @@ alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 
 alias tmux="TERM=screen-256color-bce tmux"
+alias mux="TERM=screen-256color-bce mux"

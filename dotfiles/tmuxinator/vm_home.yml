@@ -1,0 +1,13 @@
+# ~/.tmuxinator/vm_home.yml
+# you can make as many tabs as you wish...
+
+project_name: vm_home
+project_root: ~/src
+#rvm: 1.9.2@rails_project
+#pre: sudo /etc/rc.d/mysqld start
+tabs:
+  - pw-git: cd pietrushnics_world && git pull octopress master
+  - pw-vim: cd pietrushnics_world && vim
+  - pw-prev: cd pietrushnics_world && bundle exec rake preview
+  - gjd-git: cd gdziejestdobrze && git co master && git pull
+  - gjd-vim: cd gdziejestdobrze && vim
