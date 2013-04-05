@@ -166,3 +166,6 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 
 " blogging with markdown
 au BufRead,BufEnter *.markdown setlocal textwidth=80 formatoptions+=w spell spelllang=en_us
+
+"blogging mapping
+nmap <C-p>f :vimgrep /published: false/ source/_posts/*.markdown<CR>
