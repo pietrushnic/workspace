@@ -11,3 +11,4 @@ tabs:
   - pw-prev: cd pietrushnics_world && bundle exec rake preview
   - gjd-git: cd gdziejestdobrze && git co master && git pull
   - gjd-vim: cd gdziejestdobrze && vim
+  - vit: vit
