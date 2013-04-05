@@ -35,3 +35,6 @@
 [submodule "dotfiles/vim/bundle/vim-liquid"]
 	path = dotfiles/vim/bundle/vim-liquid
 	url = https://github.com/tpope/vim-liquid.git
+[submodule "dotfiles/taskwarrior"]
+	path = dotfiles/taskwarrior
+	url = https://pietrushnic@bitbucket.org/pietrushnic/taskwarrior.git
