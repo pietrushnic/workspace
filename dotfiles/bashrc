@@ -99,3 +99,5 @@ export EDITOR=vim
 
 export PYTHONSTARTUP=~/.pythonrc
 
+# tmuxinator completion
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
