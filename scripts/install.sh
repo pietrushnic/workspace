@@ -17,6 +17,8 @@ mv $HOME/.mailcap $HOME/.mailcap.old
 mv $HOME/.pythonrc $HOME/.pythonrc.old
 mv $HOME/.tmux.conf $HOME/.tmux.conf.old
 mv $HOME/.tmuxinator $HOME/.tmuxinator.old
+mv $HOME/.task $HOME/.task.old
+mv $HOME/.taskrc $HOME/.taskrc.old
 
 # link
 cd dotfiles
@@ -32,6 +34,8 @@ ln -s $PWD/mailcap $HOME/.mailcap
 ln -s $PWD/pythonrc $HOME/.pythonrc
 ln -s $PWD/tmux.conf $HOME/.tmux.conf
 ln -s $PWD/tmuxinator $HOME/.tmuxinator
+ln -s $PWD/taskwarrior/task $HOME/.task
+ln -s $PWD/taskwarrior/taskrc $HOME/.taskrc
 
 # create git ignore for known vim submodules
 echo .gitignore > vim/bundle/fuzzyfinder/.gitignore
@@ -50,6 +54,7 @@ done
 
 cd $scripts_dir/../dotfiles/vim/pathogen
 git co master
-
+cd $scripts_dir/../dotfiles/taskwarrior
+git co master
 cd $scripts_dir/..
 git submodule foreach git pull
