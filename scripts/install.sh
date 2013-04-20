@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cd ..;git submodule init
+cd ..
+git submodule init
 git submodule update
 
 # backup
@@ -13,6 +14,7 @@ mv $HOME/.bash_aliases $HOME/.bash_aliases.old
 mv $HOME/.pythonrc $HOME/.pythonrc.old
 mv $HOME/.tmux.conf $HOME/.tmux.conf.old
 mv $HOME/.tmuxinator $HOME/.tmuxinator.old
+rm -rf $HOME/.task.old
 mv $HOME/.task $HOME/.task.old
 mv $HOME/.taskrc $HOME/.taskrc.old
 mv $HOME/.bash_profile $HOME/.bash_profile.old
