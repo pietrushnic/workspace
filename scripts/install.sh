@@ -8,34 +8,28 @@ mv $HOME/.vimrc $HOME/.vimrc.old
 mv $HOME/.gitconfig $HOME/.gitconfig.old
 rm -rf $HOME/.vim.old
 mv $HOME/.vim $HOME/.vim.old
-mv $HOME/.screenrc $HOME/.screenrc.old
 mv $HOME/.bashrc $HOME/.bashrc.old
 mv $HOME/.bash_aliases $HOME/.bash_aliases.old
-mv $HOME/.muttrc $HOME/.muttrc.old
-mv $HOME/.urlview $HOME/.urlview.old
-mv $HOME/.mailcap $HOME/.mailcap.old
 mv $HOME/.pythonrc $HOME/.pythonrc.old
 mv $HOME/.tmux.conf $HOME/.tmux.conf.old
 mv $HOME/.tmuxinator $HOME/.tmuxinator.old
 mv $HOME/.task $HOME/.task.old
 mv $HOME/.taskrc $HOME/.taskrc.old
+mv $HOME/.bash_profile $HOME/.bash_profile.old
 
 # link
 cd dotfiles
 ln -s $PWD/vimrc $HOME/.vimrc
 ln -s $PWD/gitconfig $HOME/.gitconfig
 ln -s $PWD/vim $HOME/.vim
-ln -s $PWD/screenrc $HOME/.screenrc
 ln -s $PWD/bashrc $HOME/.bashrc
 ln -s $PWD/bash_aliases $HOME/.bash_aliases
-ln -s $PWD/muttrc $HOME/.muttrc
-ln -s $PWD/urlview $HOME/.urlview
-ln -s $PWD/mailcap $HOME/.mailcap
 ln -s $PWD/pythonrc $HOME/.pythonrc
 ln -s $PWD/tmux.conf $HOME/.tmux.conf
 ln -s $PWD/tmuxinator $HOME/.tmuxinator
 ln -s $PWD/taskwarrior/task $HOME/.task
 ln -s $PWD/taskwarrior/taskrc $HOME/.taskrc
+ln -s $PWD/bash_profile $HOME/.bash_profile
 
 # create git ignore for known vim submodules
 echo .gitignore > vim/bundle/fuzzyfinder/.gitignore
