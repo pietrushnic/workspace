@@ -52,3 +52,8 @@ cd $scripts_dir/../dotfiles/taskwarrior
 git co master
 cd $scripts_dir/..
 git submodule foreach git pull
+
+s_mods=$(cat .gitmodules |grep "path ="|cut -d" " -f 3)
+for s_mod in $s_mods; do
+	git submodule update $s_mod
+done
