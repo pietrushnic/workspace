@@ -40,6 +40,12 @@ echo "tags*" >> vim/bundle/fuzzyfinder/.gitignore
 echo .gitignore > vim/bundle/l9/.gitignore
 echo "tags*" >> vim/bundle/l9/.gitignore
 
+echo .gitignore > vim/bundle/cvim/.gitignore
+echo "tags*" >> vim/bundle/cvim/.gitignore
+
+echo .gitignore > vim/bundle/taglist/.gitignore
+echo "tags*" >> vim/bundle/taglist/.gitignore
+
 #checkout master for all submodules and pathogen
 scripts_dir=$PWD
 s_mods=$(find $scripts_dir/../dotfiles/vim/bundle/ -maxdepth 1 -type d|tail -n +2)
