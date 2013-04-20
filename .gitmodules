@@ -38,3 +38,6 @@
 [submodule "dotfiles/taskwarrior"]
 	path = dotfiles/taskwarrior
 	url = https://pietrushnic@bitbucket.org/pietrushnic/taskwarrior.git
+[submodule "dotfiles/solarized"]
+	path = dotfiles/solarized
+	url = https://github.com/seebi/dircolors-solarized.git
