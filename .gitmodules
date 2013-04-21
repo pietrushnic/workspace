@@ -37,3 +37,6 @@
 [submodule "dotfiles/solarized"]
 	path = dotfiles/solarized
 	url = https://github.com/seebi/dircolors-solarized.git
+[submodule "dotfiles/vim/bundle/fuzzyfinder"]
+	path = dotfiles/vim/bundle/fuzzyfinder
+	url = https://github.com/pietrushnic/vim-fuzzyfinder.git
