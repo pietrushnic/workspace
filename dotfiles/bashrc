@@ -64,6 +64,7 @@ xterm*|rxvt*)
    ;;
 *)
 	fortune
+	export TERM=xterm
     ;;
 esac
 
