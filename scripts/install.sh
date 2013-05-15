@@ -11,6 +11,9 @@ rm -rf $HOME/.vim.old
 mv $HOME/.vim $HOME/.vim.old
 mv $HOME/.bashrc $HOME/.bashrc.old
 mv $HOME/.bash_aliases $HOME/.bash_aliases.old
+mv $HOME/.muttrc $HOME/.muttrc.old
+mv $HOME/.urlview $HOME/.urlview.old
+mv $HOME/.mailcap $HOME/.mailcap.old
 mv $HOME/.pythonrc $HOME/.pythonrc.old
 mv $HOME/.tmux.conf $HOME/.tmux.conf.old
 mv $HOME/.tmuxinator $HOME/.tmuxinator.old
@@ -26,6 +29,9 @@ ln -s $PWD/gitconfig $HOME/.gitconfig
 ln -s $PWD/vim $HOME/.vim
 ln -s $PWD/bashrc $HOME/.bashrc
 ln -s $PWD/bash_aliases $HOME/.bash_aliases
+ln -s $PWD/muttrc $HOME/.muttrc
+ln -s $PWD/urlview $HOME/.urlview
+ln -s $PWD/mailcap $HOME/.mailcap
 ln -s $PWD/pythonrc $HOME/.pythonrc
 ln -s $PWD/tmux.conf $HOME/.tmux.conf
 ln -s $PWD/tmuxinator $HOME/.tmuxinator
