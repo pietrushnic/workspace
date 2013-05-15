@@ -8,7 +8,7 @@ project_root: ~/src
 tabs:
   - pw-git: cd pietrushnic.github.com && git pull octopress master
   - pw-vim: cd pietrushnic.github.com && vim
-  - pw-prev: cd pietrushnic.github.com && bundle exec rake preview
+  - pw-prev: cd pietrushnic.github.com && rake preview
   - gjd-git: cd gdziejestdobrze && git co master && git pull
   - gjd-vim: cd gdziejestdobrze && vim
   - vit: vit
