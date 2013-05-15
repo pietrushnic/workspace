@@ -1,12 +1,21 @@
 # unset important variables
 account-hook . "unset imap_user; unset imap_pass"
+
 # declare variables for passwords
 set my_gmail1 = ""
 set my_gmail2 = ""
 set my_wp = ""
+set my_op = ""
+set my_o2 = ""
+
 # get passwords from encrypted file
 source "gpg --textmode -d ~/.passwd/mutt.gpg |"
-# define accounts
+
+###################
+#
+#     Accounts
+#
+###################
 account-hook        "imaps://pietrushnic@imap.gmail.com/" "\
     set imap_user   = pietrushnic@gmail.com \
         imap_pass   = $my_gmail1"
@@ -16,7 +25,15 @@ account-hook        "imaps://piotrkrol176@imap.gmail.com/" "\
 account-hook        "imaps://piotrkrol176@imap.wp.pl/" "\
     set imap_user   = piotrkrol176@wp.pl \
         imap_pass   = $my_wp"
+account-hook        "imaps://cl4sh@imap.poczta.onet.pl/" "\
+    set imap_user   = cl4sh@op.pl \
+        imap_pass   = $my_op"
+account-hook        "imaps://leaflock@poczta.o2.pl/" "\
+    set imap_user   = leaflock \
+        imap_pass   = $my_onet"
+#
 # Setup for pietrushnic@gmail.com:
+#
 set folder          = imaps://pietrushnic@imap.gmail.com/
 mailboxes           = +INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam =[Gmail]/Trash =coreboot =flashrom =cl4sh_at_op_pl
 set spoolfile       = +INBOX
@@ -29,7 +46,10 @@ folder-hook         imaps://pietrushnic@imap.gmail.com/ "\
         realname    = 'pietrushnic' \
         smtp_url    = smtps://pietrushnic@smtp.gmail.com \
         smtp_pass   = $my_gmail1"
+
+#
 # Setup for piotrkrol176@gmail.com:
+#
 set folder          = imaps://piotrkrol176@imap.gmail.com/
 mailboxes           = +INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam =[Gmail]/Trash
 set spoolfile       = +INBOX
@@ -42,7 +62,10 @@ folder-hook         imaps://piotrkrol176@imap.gmail.com/ "\
         realname    = 'Piotr Król' \
         smtp_url    = smtps://piotrkrol176@smtp.gmail.com \
         smtp_pass   = $my_gmail2"
+
+#
 # Setup for piotrkrol176@wp.pl:
+#
 set folder          = imaps://piotrkrol176@imap.wp.pl/
 mailboxes           = +INBOX =Wysłane =SPAM =BullionVault =Kosz
 set spoolfile       = +INBOX
@@ -54,6 +77,37 @@ folder-hook         imaps://piotrkrol176@imap.wp.pl/ "\
         realname    = 'Piotr Król' \
         smtp_url    = smtps://piotrkrol176@smtp.wp.pl \
         smtp_pass   = $my_wp"
+
+#
+# Setup for cl4sh@op.pl:
+#
+set folder          = imaps://cl4sh@op.pl:$my_op@imap.poczta.onet.pl:993/
+mailboxes           = +INBOX =Wysłane =SPAM =Kosz
+set spoolfile       = +INBOX
+folder-hook         imaps://cl4sh@imap.poczta.onet.pl/ "\
+    set folder      = imaps://cl4sh@imap.poczta.onet.pl/ \
+        spoolfile   = +INBOX \
+        record      = +Wysłane \
+        from        = 'cl4sh <cl4sh@op.pl> ' \
+        realname    = 'cl4sh' \
+        smtp_url    = smtps://cl4sh@smtp.poczta.onet.pl:587 \
+        smtp_pass   = $my_op"
+
+#
+# Setup for leaflock@o2.pl:
+#
+set folder          = imaps://leaflock:$my_o2@poczta.o2.pl/
+mailboxes           = +INBOX =Wysłane =SPAM =Kosz
+set spoolfile       = +INBOX
+folder-hook         imaps://leaflock@poczta.o2.pl/ "\
+    set folder      = imaps://leaflock@poczta.o2.pl/ \
+        spoolfile   = +INBOX \
+        record      = +Wysłane \
+        from        = 'leaflock <leaflock@o2.pl> ' \
+        realname    = 'leaflock' \
+        smtp_url    = smtps://leaflock@poczta.o2.pl \
+        smtp_pass   = $my_o2"
+
 # create connections for all mailboxes
 unset imap_passive
 # if no key pressed during timeout, check mail
@@ -71,15 +125,15 @@ set sort            = threads
 set sort_aux        = last-date-received
 
 # sidebar setup
-set sidebar_width       = 30
-set sidebar_visible     = yes
-color sidebar_new yellow default
-bind index CP sidebar-prev
-bind index CN sidebar-next
-bind index CO sidebar-open
-bind pager CP sidebar-prev
-bind pager CN sidebar-next
-bind pager CO sidebar-open
+#set sidebar_width       = 30
+#set sidebar_visible     = yes
+#color sidebar_new yellow default
+#bind index CP sidebar-prev
+#bind index CN sidebar-next
+#bind index CO sidebar-open
+#bind pager CP sidebar-prev
+#bind pager CN sidebar-next
+#bind pager CO sidebar-open
 
 # I don't need these. just for documentation purposes. See below.
 # sidebar-scroll-up
@@ -109,3 +163,5 @@ bind pager G bottom
 macro index M "T.*\n;WN" "Mark all messages as read"
 # set vim as default editor
 set editor="vim -c \"set spell spelllang=pl,en\""
+
+set imap_keepalive=10
