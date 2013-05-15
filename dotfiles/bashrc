@@ -98,6 +98,9 @@ export EDITOR=vim
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source $HOME/.rvm/scripts/rvm
 
+#embedded toolchain
+PATH=$PATH:$HOME/x-tools/arm-unknown-linux-gnueabi/bin
+
 export PYTHONSTARTUP=~/.pythonrc
 
 # tmuxinator completion
