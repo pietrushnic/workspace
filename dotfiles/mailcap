@@ -1,0 +1,4 @@
+text/html; w3m -I %{charset} -dump -T text/html -cols 70; copiousoutput; description=HTML Text; test=type w3m >/dev/null
+text/html; lynx -stdin -dump -force_html -width 70; copiousoutput; description=HTML Text; test=type lynx >/dev/null
+text/html; html2text -width 70; copiousoutput; description=HTML Text; test=type html2text >/dev/null
+text/html; pandoc -f html -t markdown; copiousoutput; description=HTML Text; test=type pandoc >/dev/null
