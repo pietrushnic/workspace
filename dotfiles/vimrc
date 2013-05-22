@@ -147,7 +147,7 @@ set diffopt+=iwhite
 "nmap dt :diffthis<CR>
 "nmap du :diffupdate<CR>
 " UEFI code style indentation
-au BufRead,BufEnter /home/pietrushnic/src/*.{c,h} setlocal cindent tabstop=2 softtabstop=2 shiftwidth=2 shiftround smartindent smarttab smarttab autoindent expandtab textwidth=80 formatoptions+=w
+au BufRead,BufEnter /home/pietrushnic/src/*.{c,h,asl} setlocal cindent tabstop=2 softtabstop=2 shiftwidth=2 shiftround smartindent smarttab smarttab autoindent expandtab textwidth=80 formatoptions+=w
 au BufRead,BufEnter *.js setlocal cindent tabstop=4 softtabstop=4 shiftwidth=4 shiftround smartindent smarttab smarttab autoindent expandtab
 au BufRead,BufEnter *.{css,scss,html} setlocal cindent tabstop=2 softtabstop=2 shiftwidth=2 shiftround smartindent smarttab smarttab autoindent expandtab
 
@@ -163,6 +163,8 @@ endif
 
 " jquery support
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+" asl support
+au BufRead,BufNewFile,BufEnter *.asl set ft=asl syntax=asl
 
 " blogging with markdown
 au BufRead,BufEnter *.markdown setlocal textwidth=80 formatoptions+=w spell spelllang=en_us
