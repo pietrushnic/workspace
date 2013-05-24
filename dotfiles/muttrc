@@ -10,7 +10,7 @@ set my_o2 = ""
 
 # get passwords from encrypted file
 source "gpg --textmode -d ~/.passwd/mutt.gpg |"
-
+source $HOME/.mutt/mutt-colors-solarized-dark-16.muttrc
 ###################
 #
 #     Accounts
