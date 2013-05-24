@@ -12,3 +12,4 @@ tabs:
   - gjd-git: cd gdziejestdobrze && git co master && git pull
   - gjd-vim: cd gdziejestdobrze && vim
   - vit: vit
+  - mutt: mutt
