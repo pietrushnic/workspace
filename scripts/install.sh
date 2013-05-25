@@ -21,6 +21,8 @@ rm -rf $HOME/.task.old
 mv $HOME/.task $HOME/.task.old
 mv $HOME/.taskrc $HOME/.taskrc.old
 mv $HOME/.bash_profile $HOME/.bash_profile.old
+rm -rf $HOME/.mutt.old
+mv $HOME/.mutt $HOME/.mutt.old
 
 # link
 cd dotfiles
@@ -38,6 +40,7 @@ ln -s $PWD/tmuxinator $HOME/.tmuxinator
 ln -s $PWD/taskwarrior/task $HOME/.task
 ln -s $PWD/taskwarrior/taskrc $HOME/.taskrc
 ln -s $PWD/bash_profile $HOME/.bash_profile
+ln -s $PWD/mutt $HOME/.mutt
 
 # create git ignore for known vim submodules
 echo .gitignore > vim/bundle/fuzzyfinder/.gitignore
