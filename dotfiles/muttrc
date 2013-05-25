@@ -30,7 +30,7 @@ account-hook        "imaps://cl4sh@imap.poczta.onet.pl/" "\
         imap_pass   = $my_op"
 account-hook        "imaps://leaflock@poczta.o2.pl/" "\
     set imap_user   = leaflock \
-        imap_pass   = $my_onet"
+        imap_pass   = $my_o2"
 #
 # Setup for pietrushnic@gmail.com:
 #
