@@ -6,10 +6,10 @@ project_root: ~/src
 #rvm: 1.9.2@rails_project
 #pre: sudo /etc/rc.d/mysqld start
 tabs:
+  - shell:
   - pw-git: cd pietrushnic.github.com && git pull octopress master
   - pw-vim: cd pietrushnic.github.com && vim
   - pw-prev: cd pietrushnic.github.com && rake preview
-  - gjd-git: cd gdziejestdobrze && git co master && git pull
-  - gjd-vim: cd gdziejestdobrze && vim
   - vit: vit
   - mutt: mutt
+  - irssi: irssi
