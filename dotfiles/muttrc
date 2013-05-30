@@ -1,115 +1,11 @@
-# unset important variables
-account-hook . "unset imap_user; unset imap_pass"
-
-# declare variables for passwords
-set my_gmail1 = ""
-set my_gmail2 = ""
-set my_wp = ""
-set my_op = ""
-set my_o2 = ""
-
-# get passwords from encrypted file
 source "gpg --textmode -d ~/.passwd/mutt.gpg |"
 source $HOME/.mutt/mutt-colors-solarized-dark-16.muttrc
-###################
-#
-#     Accounts
-#
-###################
-account-hook        "imaps://pietrushnic@imap.gmail.com/" "\
-    set imap_user   = pietrushnic@gmail.com \
-        imap_pass   = $my_gmail1"
-account-hook        "imaps://piotrkrol176@imap.gmail.com/" "\
-    set imap_user   = piotrkrol176@gmail.com \
-        imap_pass   = $my_gmail2"
-account-hook        "imaps://piotrkrol176@imap.wp.pl/" "\
-    set imap_user   = piotrkrol176@wp.pl \
-        imap_pass   = $my_wp"
-account-hook        "imaps://cl4sh@imap.poczta.onet.pl/" "\
-    set imap_user   = cl4sh@op.pl \
-        imap_pass   = $my_op"
-account-hook        "imaps://leaflock@poczta.o2.pl/" "\
-    set imap_user   = leaflock \
-        imap_pass   = $my_o2"
-#
-# Setup for pietrushnic@gmail.com:
-#
-set folder          = imaps://pietrushnic@imap.gmail.com/
-mailboxes           = +INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam =[Gmail]/Trash =coreboot =flashrom =cl4sh_at_op_pl
-set spoolfile       = +INBOX
-folder-hook         imaps://pietrushnic@imap.gmail.com/ "\
-    set folder      = imaps://pietrushnic@imap.gmail.com/ \
-        spoolfile   = +INBOX \
-        postponed   = +[Gmail]/Drafts \
-        record      = +[Gmail]/'Sent Mail' \
-        from        = 'pietrushnic <pietrushnic@gmail.com> ' \
-        realname    = 'pietrushnic' \
-        smtp_url    = smtps://pietrushnic@smtp.gmail.com \
-        smtp_pass   = $my_gmail1"
+source $HOME/.mutt/mailing_lists
 
-#
-# Setup for piotrkrol176@gmail.com:
-#
-set folder          = imaps://piotrkrol176@imap.gmail.com/
-mailboxes           = +INBOX =[Gmail]/Drafts =[Gmail]/'Sent Mail' =[Gmail]/Spam =[Gmail]/Trash
-set spoolfile       = +INBOX
-folder-hook         imaps://piotrkrol176@imap.gmail.com/ "\
-    set folder      = imaps://piotrkrol176@imap.gmail.com/ \
-        spoolfile   = +INBOX \
-        postponed   = +[Gmail]/Drafts \
-        record      = +[Gmail]/'Sent Mail' \
-        from        = 'Piotr Król <piotrkrol176@gmail.com> ' \
-        realname    = 'Piotr Król' \
-        smtp_url    = smtps://piotrkrol176@smtp.gmail.com \
-        smtp_pass   = $my_gmail2"
+set folder=$HOME/.mail/
+source $HOME/.mutt/muttrc.mailboxes
+set mbox_type=Maildir
 
-#
-# Setup for piotrkrol176@wp.pl:
-#
-set folder          = imaps://piotrkrol176@imap.wp.pl/
-mailboxes           = +INBOX =Wysłane =SPAM =BullionVault =Kosz
-set spoolfile       = +INBOX
-folder-hook         imaps://piotrkrol176@imap.wp.pl/ "\
-    set folder      = imaps://piotrkrol176@imap.wp.pl/ \
-        spoolfile   = +INBOX \
-        record      = +Wysłane \
-        from        = 'Piotr Król <piotrkrol176@wp.pl> ' \
-        realname    = 'Piotr Król' \
-        smtp_url    = smtps://piotrkrol176@smtp.wp.pl \
-        smtp_pass   = $my_wp"
-
-#
-# Setup for cl4sh@op.pl:
-#
-set folder          = imaps://cl4sh@op.pl:$my_op@imap.poczta.onet.pl:993/
-mailboxes           = +INBOX =Wysłane =SPAM =Kosz
-set spoolfile       = +INBOX
-folder-hook         imaps://cl4sh@imap.poczta.onet.pl/ "\
-    set folder      = imaps://cl4sh@imap.poczta.onet.pl/ \
-        spoolfile   = +INBOX \
-        record      = +Wysłane \
-        from        = 'cl4sh <cl4sh@op.pl> ' \
-        realname    = 'cl4sh' \
-        smtp_url    = smtps://cl4sh@smtp.poczta.onet.pl:587 \
-        smtp_pass   = $my_op"
-
-#
-# Setup for leaflock@o2.pl:
-#
-set folder          = imaps://leaflock:$my_o2@poczta.o2.pl/
-mailboxes           = +INBOX =Wysłane =SPAM =Kosz
-set spoolfile       = +INBOX
-folder-hook         imaps://leaflock@poczta.o2.pl/ "\
-    set folder      = imaps://leaflock@poczta.o2.pl/ \
-        spoolfile   = +INBOX \
-        record      = +Wysłane \
-        from        = 'leaflock <leaflock@o2.pl> ' \
-        realname    = 'leaflock' \
-        smtp_url    = smtps://leaflock@poczta.o2.pl \
-        smtp_pass   = $my_o2"
-
-# create connections for all mailboxes
-unset imap_passive
 # if no key pressed during timeout, check mail
 set timeout         = 60
 # keep connection with imap server alive
@@ -133,7 +29,9 @@ auto_view text/html
 
 # add alias file for addresses
 set alias_file=~/.mutt/alias
-source ~/.mutt/alias
+set sort_alias = alias
+set reverse_alias = yes
+source $alias_file
 
 # configure addressbook
 set query_command= "abook --mutt-query '%s'"
@@ -151,3 +49,13 @@ set editor="vim -c \"set spell spelllang=pl,en\""
 
 set imap_keepalive=10
 set index_format="%4C %Z %{%b %d} %-30.30L (%4l) %s"
+
+# folder-hooks
+folder-hook 'pietrushnic@gmail.com' 'source $HOME/.mutt/accounts/pietrushnic@gmail.com'
+folder-hook 'piotrkrol176@gmail.com' 'source $HOME/.mutt/accounts/piotrkrol176@gmail.com'
+folder-hook 'piotrkrol176@wp.pl' 'source $HOME/.mutt/accounts/piotrkrol176@wp.pl'
+folder-hook 'cl4sh@op.pl' 'source $HOME/.mutt/accounts/cl4sh@op.pl'
+folder-hook 'leaflock@o2.pl' 'source $HOME/.mutt/accounts/leaflock@o2.pl'
+
+#macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
+set text_flowed=yes
