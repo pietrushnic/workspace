@@ -183,3 +183,7 @@ nmap <esc>OF $
 vmap <esc>OF $
 imap <esc>OF <esc>$a
 cmap <esc>OF <end>
+
+" text limit in mails
+au BufRead /tmp/mutt-* setlocal tw=72 formatoptions+=w fo+=aw
+
