@@ -58,4 +58,3 @@ folder-hook 'cl4sh@op.pl' 'source $HOME/.mutt/accounts/cl4sh@op.pl'
 folder-hook 'leaflock@o2.pl' 'source $HOME/.mutt/accounts/leaflock@o2.pl'
 
 #macro index 'c' '<change-folder>?<change-dir><home>^K=<enter>'
-set text_flowed=yes
