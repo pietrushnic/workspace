@@ -15,6 +15,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias src='cd $HOME/src'
 alias ws='cd $HOME/src/workspace'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
