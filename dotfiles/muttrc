@@ -1,4 +1,3 @@
-source "gpg --textmode -d ~/.passwd/mutt.gpg |"
 source $HOME/.mutt/mutt-colors-solarized-dark-16.muttrc
 source $HOME/.mutt/mailing_lists
 
