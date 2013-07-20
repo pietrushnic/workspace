@@ -18,5 +18,5 @@ tabs:
         - offlineimap
         - cd rails_tutorial/sample_app && rails server
         - cd pietrushnic.github.com && rake preview
-  - sp-app_git: cd sp-app/sp && git lola
-  - sp-app_vim: cd sp-app/sp && vim
+  - sp-app_git: cd sp-app && git lola
+  - sp-app_vim: cd sp-app && vim
