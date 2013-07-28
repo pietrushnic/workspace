@@ -24,6 +24,8 @@ mv $HOME/.bash_profile $HOME/.bash_profile.old
 rm -rf $HOME/.mutt.old
 mv $HOME/.mutt $HOME/.mutt.old
 mv $HOME/.offlineimaprc $HOME/.offlineimaprc.old
+rm -rf $HOME/.weechat.old
+mv $HOME/.weechat $HOME/.weechat.old
 
 # link
 cd dotfiles
@@ -43,6 +45,8 @@ ln -s $PWD/taskwarrior/taskrc $HOME/.taskrc
 ln -s $PWD/bash_profile $HOME/.bash_profile
 ln -s $PWD/mutt $HOME/.mutt
 ln -s $PWD/mutt/offlineimaprc $HOME/.offlineimaprc
+ln -s $PWD/weechat $HOME/.weechat
+
 
 # create git ignore for known vim submodules
 echo .gitignore > vim/bundle/fuzzyfinder/.gitignore
