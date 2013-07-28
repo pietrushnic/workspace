@@ -11,7 +11,7 @@ tabs:
   - pw-vim: cd pietrushnic.github.com && vim
   - vit: vit
   - mutt: mutt
-  - irssi: irssi
+  - weechat: weechat-curses
   - srv: 
       layout: main-vertical
       panes: 
