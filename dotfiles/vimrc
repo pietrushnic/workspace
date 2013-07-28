@@ -75,8 +75,8 @@ let g:ctags_statusline=1
 " fugitive mapping
 nmap <C-g>d :Gdiff<CR>
 nmap <C-g>w :Gwrite<CR>
-nmap <C-g>d2 :diffget /2<CR>
-nmap <C-g>d3 :diffget /3<CR>
+nmap <C-g>2 :diffget /2<CR>
+nmap <C-g>3 :diffget /3<CR>
 nmap <C-g>u :diffupdate<CR>
 nmap <C-g>s :Gstatus<CR>
 
