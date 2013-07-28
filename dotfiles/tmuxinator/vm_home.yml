@@ -15,8 +15,8 @@ tabs:
   - srv: 
       layout: main-vertical
       panes: 
-        - offlineimap
-        - cd rails_tutorial/sample_app && rails server
+        - cd sp-app && guard
         - cd pietrushnic.github.com && rake preview
+        - offlineimap
   - sp-app_git: cd sp-app && git lola
   - sp-app_vim: cd sp-app && vim
