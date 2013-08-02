@@ -79,6 +79,7 @@ nmap <C-g>2 :diffget /2<CR>
 nmap <C-g>3 :diffget /3<CR>
 nmap <C-g>u :diffupdate<CR>
 nmap <C-g>s :Gstatus<CR>
+nmap <C-g>c :Gcommit -m "%:t:r: fix "<C-left>
 
 " displays tabs with :set list & displays when a line runs off-screen
 set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
@@ -187,3 +188,6 @@ cmap <esc>OF <end>
 " text limit in mails
 au BufRead /tmp/mutt-* setlocal tw=72 formatoptions+=w fo+=aw
 
+" build edk2
+nmap <C-f>b :!. edksetup.sh;build -j build.log<CR>
+nmap <C-f>c :!. edksetup.sh;build -j build.log cleanall<CR>
