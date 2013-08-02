@@ -61,3 +61,6 @@
 [submodule "dotfiles/weechat"]
 	path = dotfiles/weechat
 	url = https://pietrushnic@bitbucket.org/pietrushnic/weechat.git
+[submodule "dotfiles/vim/bundle/vim-rake"]
+	path = dotfiles/vim/bundle/vim-rake
+	url = https://github.com/tpope/vim-rake.git

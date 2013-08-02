@@ -17,8 +17,10 @@ alias l='ls -CF'
 
 alias src='cd $HOME/src'
 alias ws='cd $HOME/src/workspace'
+# keeping Debian up to date
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
+alias up="sudo apt-get update && sudo apt-get upgrade --yes && sudo apt-get dist-upgrade --yes && sudo apt-get autoclean --yes && sudo apt-get autoremove --yes"
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias mux="TERM=screen-256color-bce mux"
