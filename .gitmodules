@@ -64,3 +64,6 @@
 [submodule "dotfiles/vim/bundle/vim-rake"]
 	path = dotfiles/vim/bundle/vim-rake
 	url = https://github.com/tpope/vim-rake.git
+[submodule "dotfiles/vim/bundle/vim-table-mode"]
+	path = dotfiles/vim/bundle/vim-table-mode
+	url = https://github.com/pietrushnic/vim-table-mode.git
