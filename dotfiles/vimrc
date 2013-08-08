@@ -191,3 +191,18 @@ au BufRead /tmp/mutt-* setlocal tw=72 formatoptions+=w fo+=aw
 " build edk2
 nmap <C-f>b :!. edksetup.sh;build -j build.log<CR>
 nmap <C-f>c :!. edksetup.sh;build -j build.log cleanall<CR>
+set makeprg=source\ edksetup.sh;build\ -j\ build.log
+
+" editing macros
+" insert quotes and EOL to begging and end of string
+let @b = 'A\n"I"'
+" first argument is a register in inline assembly
+let @c = 'I"wwi%%A\n"'
+" replace Intel syntax assembly with AT&T syntax
+let @d = 'wvt,"1xxxA, "1pA\n"I"j"'
+" insert #ifndef __GNUC__ around line
+let @e = 'O#ifndef __GNUC__^jo#endif //__GNUC__'
+" copy _asm block and insert #ifndef __GNUC__
+let @a = 'O#ifndef __GNUC__/_v/}y/}o#elseo#endif //__GNUC__Op'
+let @f = 'v/}=x/{r(/}cw);'
+
