@@ -1,0 +1,13 @@
+# ~/.tmuxinator/vm_home.yml
+# you can make as many tabs as you wish...
+
+project_name: vm_uhdmgr
+project_root: ~/src/uhdmgr/
+#rvm: 1.9.2@rails_project
+#pre: sudo /etc/rc.d/mysqld start
+tabs:
+  - shell:
+  - um-git: git st
+  - um-vim: vim
+  - irb: irb
+  - uhmg: su uhmg
