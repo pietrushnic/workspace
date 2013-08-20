@@ -35,3 +35,5 @@
 	untracked = cyan
 [diff]
 	tool = vimdiff
+[core]
+	pager = less -F -X
