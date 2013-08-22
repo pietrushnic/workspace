@@ -37,3 +37,4 @@
 	tool = vimdiff
 [core]
 	pager = less -F -X
+	autocrlf = input
