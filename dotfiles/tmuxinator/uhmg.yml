@@ -1,0 +1,15 @@
+# ~/.tmuxinator/vm_home.yml
+# you can make as many tabs as you wish...
+
+name: uhmg
+root: ~/src/uhmg
+windows:
+  - shell:
+  - mutt: mutt
+  - weechat: weechat-curses
+  - srv: 
+      layout: main-vertical
+      panes: 
+        - offlineimap
+  - uhmg_git: git st
+  - uhmg_vim: vim

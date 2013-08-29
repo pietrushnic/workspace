@@ -1,0 +1,14 @@
+name: sp-app
+root: ~/src/sp-app
+windows:
+  - shell:
+  - mutt: mutt
+  - weechat: weechat-curses
+  - srv: 
+      layout: main-vertical
+      panes: 
+        - guard
+        - offlineimap
+  - sp-app_git: git st
+  - sp-app_rconsole: rails console
+  - sp-app_vim: vim

@@ -1,0 +1,13 @@
+name: blog
+root: ~/src/pietrushnic.github.com/
+windows:
+  - shell:
+  - pw-git: git st
+  - pw-vim: vim
+  - mutt: mutt
+  - weechat: weechat-curses
+  - srv:
+      layout: main-vertical
+      panes:
+        - rake preview
+        - offlineimap
