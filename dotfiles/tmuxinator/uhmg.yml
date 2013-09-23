@@ -12,4 +12,5 @@ windows:
       panes: 
         - offlineimap
   - uhmg_git: git st
-  - uhmg_vim: vim
+  - uhmg_vim: vim uhmg.rb
+  - testing: sudo login uhmg
