@@ -11,7 +11,7 @@
 	hist = log --pretty=format:\"%h %ad|%s%d [%an]\" --graph --date=short
 	lolg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	ls = ls-files
-
+	edit-unmerged = "!$EDITOR `git diff --name-only --diff-filter=U`"
 	# Show files ignored by git:
 	ign = ls-files -o -i --exclude-standard
 	dt = difftool
