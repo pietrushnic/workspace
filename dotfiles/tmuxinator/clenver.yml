@@ -1,0 +1,16 @@
+# ~/.tmuxinator/vm_home.yml
+# you can make as many tabs as you wish...
+
+name: clenver
+root: ~/src/clenver
+windows:
+  - shell:
+  - mutt: mutt
+  - weechat: weechat-curses
+  - srv:
+      layout: main-vertical
+      panes:
+        - offlineimap
+  - clenver_git: git st
+  - clenver_vim: vim bin/clenver
+  - testing: sudo login clenver
